@@ -27,13 +27,38 @@ app.get('/ads', (request, response) => {
     { id: 3, name: 'Anúncio 3' },
     { id: 4, name: 'Anúncio 4' },
     { id: 5, name: 'Anúncio 5' },
-  ]
-
-  )
+  ])
 })
 
 app.listen(3333)
+
+app.get('/games/:id/ads', (request, response) => {
+  const gameId = request.params.id;
+
+  return response.send(gameId);
+
+app.get('/ads/:id/discord', (request, response) => {
+
+})
 ```
+
+/**  'Roadbarns' - parâmetros
+* Query: ...
+* Route: ...
+* Body: ...
+*/
+
+localhost:3333/ads?page=2  -> para persistir estado (não use para dados sensíveis)
+
+localhost:3333/ads/5  -> para acessar o anúncio com id 5
+localhost:333/post/criar-api  -> acessar esse post
+
+o body é usado para informações mais sensíveis (fica escondido)
+
+! Quando não sabe qual banco de dados usar, use um banco relacional. ex. SQLite
+
+
+
 
 ## Entidades
 
@@ -57,7 +82,7 @@ hourEnd (1:30 h -> 90 (ou 5400 seg.), R$ 79,99 -> 7999)
 (cuidado com datas: fusos, formatos;
 pontos flutuantes)
 useVoiceChannel
-createAt
+createdAt
 
 ## Casos de uso-
 
