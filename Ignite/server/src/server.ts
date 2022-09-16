@@ -1,9 +1,7 @@
-import express from 'express'
+import express, { request, response } from 'express'
 
 const app = express()
 
-// localhost: 3333
-// www.minhaapi.com/ads
 
 app.get('/ads', (request, response) => {
   return response.json([
