@@ -1,5 +1,5 @@
 import { TouchableOpacity, View } from 'react-native';
-import { } from '@expo/vector-icons';
+import { } from 'phosphor-react-native'
 
 import { Duoinfo } from '../Duoinfo';
 
